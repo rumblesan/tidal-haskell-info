@@ -1,0 +1,48 @@
+
+-- Haskell operators are just functions with some special functionality
+newsum = (+)
+
+newsum 1 2
+
+(+) 1 2
+
+1 `newsum` 2
+
+-- They also have precedence
+
+2 * 3 + 4
+
+-- Function calls also have precedence. They have the highest precedence of anything
+
+somemaths :: Int -> Int
+somemaths a = (a + 1) * 2
+
+somemaths 2 * 3
+
+-- Functions are greedy though
+
+d1 sound "bd sn"
+
+d1 (sound "bd sn")
+hush
+
+-- $ can help though
+
+d1 $ sound "bd sn"
+hush
+
+:t ($)
+
+-- $ has the lowest precedence of everything so it happens last
+-- Everything on the left happens first
+let left = every 4 (slow 2)
+:t left
+-- Then everything on the right
+let right = sound "bd sn"
+:t right
+-- Then the left is applied to the right
+let output = left right
+:t output
+d1 output
+
+hush

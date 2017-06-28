@@ -1,0 +1,20 @@
+clear
+
+-- Haskell functions
+
+mysum :: Integer -> Integer -> Integer -> Integer
+mysum a b c = a + b + c
+
+mysum 1 2 3
+
+:t mysum 1 2
+
+-- Tidal functions
+
+d1 $ every 4 (slow 2) $ sound "bd sn"
+
+:t slow
+
+:t every
+
+hush

@@ -1,0 +1,17 @@
+
+-- # has a precedence of 1, so happens before $
+
+:t (#)
+
+d1 $ every 4 rev $ sound "bd hh sn hh" # cutoff "1300 2000 4000 200"
+
+let left1 = d1
+let right1 = every 4 rev $ sound "bd hh sn hh" # cutoff "1300 2000 4000 200"
+
+let left2 = every 4 rev
+let right2 = sound "bd hh sn hh" # cutoff "1300 2000 4000 200"
+
+let left3 = sound "bd hh sn hh"
+let right3 = cutoff "1300 2000 4000 200"
+
+hush

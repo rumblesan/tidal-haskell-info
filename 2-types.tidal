@@ -1,0 +1,42 @@
+
+-- Types tell us what something is
+:t 'a'
+:t 1
+:t 1.0
+
+let str = "Hello, Hackspace!" :: String
+:t str
+:t "Hello"
+
+-- Typeclasses can define behaviours or functionality on types
+:t (+)
+:t (/)
+:t div
+
+-- Types can have parameters
+
+:t []
+let lista = [1, 2, 3] :: [Integer]
+let listb = ["a", "b", "c"] :: [String]
+let listb = ['a', 'b']
+:t listb
+
+-- Tidal types
+
+:t sound
+:t sound "bd sn"
+-- Turning a String into a Pattern String requires a bit of magic
+-- We'll gloss over that for today
+
+-- What's a ParamPattern?
+-- https://github.com/tidalcycles/Tidal/blob/master/Sound/Tidal/Stream.hs#L50-L52
+
+:t d1
+
+d1 (sound "bd sn")
+
+d1 silence
+
+:t silence
+
+-- Types can 
